@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components'
 import NavBar from './navbar/Navbar'
 import BlueText from './text/text'
 import MainText from './text/MainText'
+import image from './img/bluesRoad.jpg'
 
 import './App.css';
 
@@ -16,6 +17,9 @@ const Outer = styled.div`
 `
 
 const Header = styled.div`
+background-image: url(${image});
+background-size: cover;
+background-position: center;
 height: 100vh;
 background-color: #326b91;
   h1 {
@@ -31,7 +35,9 @@ p:hover {
 }
 
   @media (max-width: 480px) {
-    height: 120px;
+    height: 20vh;
+    background-size: cover;
+    background-position: center;
   }
 `
 const Logo = styled.img`
@@ -53,19 +59,19 @@ function App() {
   return (
     <Outer>
       <Header >
-        <Logo src={logo} alt="logo" />
+        {/* <Logo src={logo} alt="logo" /> */}
         {/* <Logo backwards src={logo} alt="logo" /> */}
-        <h1>Davide</h1>
-        <h4>ReactJs</h4>
-        <p>
+        {/* <h1>Davide</h1> */}
+        {/* <h4>ReactJs</h4> */}
+        {/* <p>
           styled-components workshop
-        </p>
+        </p> */}
       </Header>
-      <NavBar />
-      <ThemeProvider theme={theme}>
+      {/* <NavBar /> */}
+      {/* <ThemeProvider theme={theme}>
         <MainText>I am the one and only</MainText>
-      </ThemeProvider>
-      <BlueText />
+      </ThemeProvider> */}
+      {/* <BlueText /> */}
     </Outer>
   );
 }
